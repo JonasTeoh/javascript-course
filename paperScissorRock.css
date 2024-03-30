@@ -1,0 +1,231 @@
+body {
+  font-family: arial;
+}
+
+.body2 {
+  background-color: black;
+}
+
+.js-score2 {
+  color: white;
+}
+
+.js-vs {
+  display: inline-block;
+  position: relative;
+  top: 30px;
+}
+
+.js-vs2 {
+  color: white;
+}
+
+.move {
+  display: inline;
+  width: 100%;
+}
+
+.move2 {
+  color: white;
+}
+
+.move-img-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.move-img-div2 {
+  color: white;
+}
+
+.move-imgs-div {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  justify-content: center;
+  text-align: center;
+}
+
+.move-img {
+  width: 100px;
+}
+
+.dark-mode {
+  display: inline;
+  position: relative;
+  bottom: 3px;
+  right: -290px;
+}
+
+.dark-mode2 {
+  color: white;
+}
+
+.reset-button {
+  border: none;
+  padding: 12px 20px 12px 20px;
+  border-radius: 57px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.reset-button2 {
+  background-color: white;
+  color: black;
+}
+
+.reset-button:hover {
+  background-color: rgb(100, 100, 100);
+}
+
+.reset-button2:hover {
+  background-color: rgb(200, 200, 200);
+}
+
+.result {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.result-win {
+  color: green;
+}
+
+.result-win2 {
+  color: lightgreen;
+}
+
+.result-lose {
+  color: red;
+}
+
+.result-lost2 {
+  color: lightcoral;
+}
+
+.result-tie {
+  color: blue;
+}
+
+.result-tie2 {
+  color: lightblue;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.title2 {
+  color: white;
+}
+
+.all-button {
+  border-radius: 100%;
+  border-style: solid;
+  background-color: white;
+  border-width: 3px;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  justify-content: center;
+  display: flex;
+  padding: 30px 30px 30px 30px;
+}
+
+.all-button2 {
+  border-color: white;
+  background-color: black;
+}
+
+.all-button:hover {
+  background-color: rgb(81, 182, 255);
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.biggest-bar {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.button-div {
+  width: 200px;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.button-div2 {
+  color: white;
+}
+
+.button-img {
+  width: 100%;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  right: -300px;
+  top: -11px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+.box:checked+.slider {
+  background-color: #2196F3;
+}
+
+.box:checked+.slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

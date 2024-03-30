@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Paper Scissor Rock</title>
+  <link rel="stylesheet" href="paperScissorRock.css">
+</head>
+
+<body>
+  <p class="title">Paper Scissor Rock</p>
+  <p class="dark-mode">Dark Mode</p>
+  <label class="switch">
+    <input class="box js-dark-mode" type="checkbox">
+    <span class="slider round"></span>
+  </label>
+  <div class="biggest-bar">
+    <div class="button-div">
+      <button class="all-button" onclick="paperPlayGame();">
+        <img class="button-img" src="https://supersimple.dev/projects/rock-paper-scissors/images/paper-emoji.png">
+      </button>
+      Paper (p)
+    </div>
+    <div class="button-div">
+      <button class="all-button" onclick="scissorPlayGame();">
+        <img class="button-img" src="https://supersimple.dev/projects/rock-paper-scissors/images/scissors-emoji.png">
+      </button>
+      Scissor (s)
+    </div>
+    <div class="button-div">
+      <button class="all-button" onclick="rockPlayGame();">
+        <img class="button-img" src="https://supersimple.dev/projects/rock-paper-scissors/images/rock-emoji.png">
+      </button>
+      Rock (r)
+    </div>
+  </div>
+  <p class="js-result result"></p>
+  <span class="move-div">
+    <span class="move-imgs-div">
+      <span class="move-img-div js-move-img"></span>
+      <p class="js-vs"></p>
+      <span class="move-img-div js-pcmove-img"></span>
+    </span>
+    <br>
+    <span class="move">
+      <p class="js-move move"></p>
+    </span>
+  </span>
+
+  <p class="js-score"></p>
+  <div>
+    <button class="reset-button" onclick="resetScore();">Reset Score</button>
+    <button class="autoplay-button reset-button" onclick="autoPlay();">Auto Play</button>
+  </div>
+</body>
+
+</html>
+
+<script src="paperScissorRock.js"></script>

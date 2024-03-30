@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>To do List</title>
+  <link rel="stylesheet" href="toDoList.css">
+</head>
+
+<body>
+  <p>Todo List</p>
+  <div class="todo-grid">
+    <input class="js-task-input" placeholder="Task name" onkeydown="checkEnter(event.key)">
+    <input class="js-task-date" type="date" onkeypress="return false" onclick="showPicker()">
+    <button onclick="addTodo()">Add</button>
+  </div>
+
+  <div class="js-display-task todo-grid"></div>
+
+  <script>
+    const todoList = [];
+
+    function addTodo() {
+      const inputElementName = document.querySelector('.js-task-input');
+      const inputElementDate = document.querySelector('.js-task-date');
+      const taskName = inputElementName.value;
+      let date = new Date(inputElementDate.value);
+      const taskDate = date.toLocaleDateString();
+      todoList.push({
+        name: `${taskName}`,
+        dueDate: `${taskDate}`
+      });
+      console.log(todoList.length);
+      inputElementName.value = '';
+      inputElementDate.value = '';
+      displayTask(todoList);
+    }
+
+    function checkEnter(eventKey) {
+      if (eventKey === 'Enter') {
+        addTodo();
+      }
+    }
+
+    function displayTask(todoList) {
+      let taskList = '';
+
+      todoList.forEach(function(value, index){
+        taskList += `
+        <div>${value.name}</div> 
+        <div>${value.dueDate}</div> 
+        <button onclick="deleteTask(${index});">Delete</button>`;
+      });
+      
+      /* above code works like below
+      for (let x = 0; x < todoList.length; x++) {
+        taskList += `
+        <div>${todoList[x].name}</div> 
+        <div>${todoList[x].dueDate}</div> 
+        <button onclick="deleteTask(${x});">Delete</button>`;
+      }
+      */
+
+      document.querySelector('.js-display-task').innerHTML = taskList;
+
+    }
+
+    function deleteTask(index) {
+      todoList.splice(index, 1);
+      displayTask(todoList);
+    }
+
+  </script>
+</body>
+
+</html>
