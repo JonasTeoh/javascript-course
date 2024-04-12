@@ -1,11 +1,14 @@
-export const cart = [];
+export const cart = [{
+    productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
+    quantity: 1
+}];
 
 export function addToCart(productId) {
     var inputQuantity = document.getElementById("js-quantity-input").value;
     if (cart.find(cartItem => cartItem.productId === productId)) {
         cart.find(cartItem => {
             if (cartItem.productId === productId) {
-                p.quantity++;
+                cartItem.quantity++;
             }
         })
     } else {
