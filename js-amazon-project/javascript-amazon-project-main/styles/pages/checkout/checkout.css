@@ -209,3 +209,15 @@
   margin-top: 11px;
   margin-bottom: 15px;
 }
+
+.quantity-input {
+  width: 45px;
+}
+
+.edit-quantity {
+  display: none;
+}
+
+.editing-quantity {
+  display: initial;
+}
